@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ala Venkata Soumya | Digital Marketing Specialist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ala Venkata Soumya, ROI-driven Digital Marketer skilled in Meta Ads, WhatsApp, IVR & SMS campaigns.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #132940;
+            --secondary: #18a0fb;
+            --accent: #794cff;
+            --accent2: #08d9d6;
+            --bg: #f5f8fa;
+            --card: #fff;
+            --text: #1d283a;
+            --text-light: #7191b3;
+            --border: #dce8f4;
+            --gradient: linear-gradient(110deg, #18a0fb 0%, #794cff 100%);
+            --shadow: 0 10px 40px rgba(17,35,68,0.11);
+        }
+        html, body {margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;width:100vw;}
+        body {background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height:1.7;}
+        a {color:inherit;text-decoration:none;}
+        header {
+            background: var(--card);
+            position: sticky; top: 0; left: 0; width: 100vw; z-index: 100;
+            box-shadow: 0 2px 10px rgba(17,35,68,0.07);
+        }
+        .navbar {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 68px; padding: 0 4vw;
+        }
+        .navbar .logo {
+            font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--accent); letter-spacing: 1px; font-weight: 700;
+        }
+        .navbar ul { display: flex; gap: 2vw; list-style: none; align-items: center; }
+        .navbar li a {
+            color: var(--primary); font-weight: 600; font-size: 1rem; padding: 7px 14px;
+            border-radius: 14px; transition: background 0.17s, color 0.17s;
+        }
+        .navbar li a.active, .navbar li a:hover { background: var(--gradient); color: #fff; }
+        /* Hero */
+        .hero {
+            min-height: 65vh;
+            background: var(--gradient), url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            padding-top: 60px; position: relative; overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            left:0;top:0;width:100%;height:100%;
+            background: linear-gradient(110deg,rgba(19,41,64,0.1) 0%,rgba(18,160,251,0.18) 80%);
+            z-index: 0;
+        }
+        .hero-content {
+            max-width: 860px;
+            padding: 80px 24px 54px 24px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+        .hero h1 {font-family: 'Playfair Display', serif;font-size: clamp(2.4rem, 7vw, 3.2rem);font-weight: 700;margin-bottom: 7px;letter-spacing: -1px;}
+        .hero h2 {font-size: 1.18rem;font-weight: 500;}
+        .hero .desc {font-size: 1.08rem;color: #d6f3ff;opacity:0.97;max-width:540px;margin:1.7rem auto 2.5rem auto;}
+        .hero-img { width: 120px; height: 120px; border-radius: 50%; margin: 32px auto 0 auto; box-shadow: 0 4px 26px rgba(34,45,44,0.11); object-fit: cover; border: 3px solid var(--accent);}
+        section {padding: 74px 0 60px 0;}
+        .container {max-width: 1100px;margin: 0 auto;padding: 0 4vw;}
+        /* About Section */
+        .about-grid {display: flex; flex-wrap: wrap; align-items: center; gap: 52px; justify-content: center;}
+        .about-image {min-width:200px;max-width:290px;}
+        .about-image img {width:100%;border-radius:22px;box-shadow:var(--shadow);}
+        .about-content {flex:2 1 360px;min-width:260px;}
+        .about-content h3 {font-family: 'Playfair Display',serif;font-size:1.6rem;margin-bottom: 12px;color: var(--primary);}
+        .about-content ul {margin:12px 0;color:var(--text-light);font-size:1.08em;}
+        .about-content ul li {margin-bottom: 6px;}
+        .about-content .cta-link {display: inline-block;margin-top:18px;padding:10px 28px;border-radius:21px;background:var(--accent);color:#fff;box-shadow:0 4px 22px rgba(95,119,197,0.14);font-weight:600;font-size:1.08em;transition: background 0.21s;}
+        .about-content .cta-link:hover {background: var(--secondary);}
+        /* Skills, Expertise & Services */
+        .section-title {font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--primary);text-align:center;margin-bottom:13px;}
+        .section-sub {color:var(--text-light); text-align:center; font-size:1.14rem;margin-bottom:28px;}
+        .skills-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;}
+        .skill-card {
+            background: var(--card); border-radius: 15px; box-shadow:0 10px 30px rgba(18,22,37,0.08);
+            padding: 2.2rem 1.3rem 2.1rem 1.3rem; transition:transform 0.23s, box-shadow 0.23s;
+        }
+        .skill-card:hover {transform: translateY(-8px) scale(1.016); box-shadow:0 15px 38px rgba(9,16,33,0.14);}
+        .skill-card h4 {font-size:1.21rem;color:var(--accent);font-weight:700;margin-bottom:0.55em;}
+        .skill-card ul {font-size:1.08em;color:var(--text-light);margin-left:14px;}
+        .skill-card ul li {margin-bottom:8px;}
+        /* Projects Section */
+        .projects-section {background: var(--bg);}
+        .project-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(270px,1fr)); gap: 1.8rem; margin-top:2rem;}
+        .project-card {background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding-bottom:8px;transition:transform .23s, box-shadow .23s;}
+        .project-card:hover {transform:translateY(-6px) scale(1.021);box-shadow:0 14px 32px rgba(35,63,108,.16);}
+        .project-img {width:100%;height:160px;border-radius:10px 10px 0 0;object-fit:cover;background:var(--accent2);}
+        .project-body {padding:1.4rem 1.2rem 1rem 1.2rem;}
+        .project-body h5 {color:var(--accent);font-size:1.09rem;margin-bottom:10px;}
+        .project-body p {color: var(--text-light);}
+        /* Certifications, Testimonials etc—as before... */
+        .cert-section {background: #f3f7fa;}
+        .cert-list {display:flex;flex-wrap:wrap;justify-content:center;gap:26px;margin-top:26px;}
+        .cert-card {padding:2rem 1.8rem 1.4rem 1.8rem;background:var(--card);border-radius:12px;box-shadow:0 2px 16px rgba(24,34,51,0.09);text-align:center;min-width:220px;max-width:300px;flex:1;}
+        .cert-card h4 {color:var(--accent);font-size:1.07rem;font-weight:700;}
+        .cert-card .org {color:var(--text-light);font-size:.97em;margin-top:7px;}
+        .testimonial-section {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 0 60px 0;
+        }
+        .testimonial-card {
+            max-width: 640px; margin: 0 auto; background:rgba(255,255,255,.09);
+            border-radius:18px; padding:42px 34px; box-shadow:0 9px 24px rgba(14,28,50,.11); text-align:center;
+        }
+        .testimonial-card p {font-size:1.17em;font-style:italic;margin-bottom:16px;}
+        .testimonial-author {font-weight:700;color:#fff;font-size:1.06em;}
+        /* Contact Icons */
+        .contact-short {
+            display: flex; justify-content: center; align-items: center; gap: 2.5em; padding: 60px 0 30px 0;
+            background: var(--gradient); color: #fff;
+        }
+        .contact-icon {display:flex;flex-direction:column;align-items:center;cursor:pointer;transition: transform 0.18s;}
+        .contact-icon:hover {transform:scale(1.14);}
+        .material-icons {font-size:3em !important; color:#fff; border-radius:50%; padding:15px; background:rgba(255,255,255,0.09); box-shadow:0 4px 22px rgba(17,28,45,0.08); margin-bottom:10px;transition:background 0.18s;}
+        .contact-label {color:#fff;opacity:.8;font-size:.98em;}
+        footer {background:var(--primary);color:#c3defc;text-align:center;padding:2.1rem 2vw;font-size:1em;letter-spacing:.1px;}
+        @media (max-width:900px) {
+            .about-grid {flex-direction: column;gap:20px;}
+            .about-image {margin-bottom: 14px;align-self:center;}
+            .project-grid, .skills-grid, .cert-list {gap:18px;}
+        }
+        @media (max-width:520px) {
+            .cert-list{flex-direction:column;}
+            .skills-grid,.project-grid{grid-template-columns: 1fr;}
+            .hero-content{padding:30px 7px 20px 7px;}
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar">
+            <span class="logo">Soumya</span>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <img class="hero-img" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Soumya profile">
+            <h1>Ala Venkata Soumya</h1>
+            <h2>Digital Marketing Specialist</h2>
+            <div class="desc">
+                Driving business growth with Meta Ads, WhatsApp, IVR, and SMS. Backed by hands-on technical skills and a passion for analytics, strategy, and creative problem solving.
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+    <section id="resume">
+        <div class="container">
+            <div class="about-grid" data-aos="fade-up">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Digital Marketer" />
+                </div>
+                <div class="about-content">
+                    <h3>About Me</h3>
+                    <p>
+                        Results-driven professional blending marketing vision with strong technical expertise. Developed and managed end-to-end campaigns at IntexmMedia Pvt Ltd, boosting sales and customer acquisition. Passionate about leveraging data—analysis, optimization, and backend automation form my approach.
+                    </p>
+                    <ul>
+                        <li>Specializes in campaign strategy, messaging, and lead nurturing for optimal engagement.</li>
+                        <li>Backend developer: PHP, CodeIgniter, MySQL—build tools that scale and enable growth.</li>
+                        <li>Collaborates across teams to match business goals with digital marketing solutions.</li>
+                        <li>Eager learner: Always exploring new tools and industry trends for innovation.</li>
+                    </ul>
+                    <a href="Your_Resume.pdf" class="cta-link" target="_blank">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills, Services, Expertise -->
+    <section>
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">Core Skills & Expertise</div>
+            <div class="section-sub">Analytics, strategy, creative content & code—delivering digital growth across channels</div>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up">
+                    <h4>Digital Marketing Skills</h4>
+                    <ul>
+                        <li>Meta Ads (Facebook, Instagram)</li>
+                        <li>WhatsApp, SMS & IVR Campaigns</li>
+                        <li>Personalized messaging, funnel optimization</li>
+                        <li>Brand voice and content engagement</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>PHP, Python, CodeIgniter, HTML/CSS/JS</li>
+                        <li>MySQL, Linux, Bash</li>
+                        <li>REST APIs, MVC builds, backend dev</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Analytics & Tools</h4>
+                    <ul>
+                        <li>A/B Testing, Conversion Optimization</li>
+                        <li>Meta Ads Manager, Google Analytics</li>
+                        <li>Performance monitoring, audience insights</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Growth Mindset</h4>
+                    <ul>
+                        <li>Adapts to market shifts, evolves digital strategies</li>
+                        <li>Always learning, finding new ways to drive results</li>
+                        <li>Combines creative and technical thinking for impact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects / Experience -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">Projects & Impact</div>
+            <div class="section-sub">Innovative solutions built for measurable growth</div>
+            <div class="project-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Campaigns" class="project-img">
+                    <div class="project-body">
+                        <h5>Lead Gen Meta Ads</h5>
+                        <p>Executed high-ROI Facebook/Instagram campaigns for finance & local businesses, increasing qualified leads through A/B testing and creative automation.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="WhatsApp Project" class="project-img">
+                    <div class="project-body">
+                        <h5>WhatsApp Prospect Engine</h5>
+                        <p>Developed bulk and smart messaging for lead nurturing, with automated flows & CRMs, boosting user retention metrics and streamlining support.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=400&q=80" alt="IVR Project" class="project-img">
+                    <div class="project-body">
+                        <h5>IVR Onboarding Suite</h5>
+                        <p>Custom IVR and SMS systems for onboarding, qualification and feedback—reduced churn; increased nurture-to-signup conversions.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Backend Project" class="project-img">
+                    <div class="project-body">
+                        <h5>Automation & Analytics</h5>
+                        <p>PHP/MySQL dashboard development for campaign tracking, performance reporting and seamless marketing-to-sales handoff.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1465101012196-1fa8a159f8ea?auto=format&fit=crop&w=400&q=80" alt="AB Testing Project" class="project-img">
+                    <div class="project-body">
+                        <h5>AB Testing & Optimization</h5>
+                        <p>Implemented creative and audience AB testing, improving click-through rates and conversions for multiple campaigns. Used Meta and Google Analytics for actionable insights and ongoing performance improvement.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1531379457165-41c1ddd36b83?auto=format&fit=crop&w=400&q=80" alt="Content Campaigns" class="project-img">
+                    <div class="project-body">
+                        <h5>Content Engagement Campaigns</h5>
+                        <p>Crafted audience-targeted ad copy and branded messaging for WhatsApp and SMS campaigns, boosting user engagement and maintaining consistent brand voice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Certifications, Testimonials, Contact Icons, Footer as before... -->
+    <section class="cert-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">Certifications</div>
+            <div class="cert-list">
+                <div class="cert-card" data-aos="fade-up">
+                    <h4>SEO Certification</h4>
+                    <div class="org">HubSpot Academy</div>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Google Ads Search</h4>
+                    <div class="org">Google Skillshop</div>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <h4>AWS Cloud Internship</h4>
+                    <div class="org">EduSkills</div>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Cloud Foundation</h4>
+                    <div class="org">AWS Academy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container testimonial-card" data-aos="zoom-in">
+            <p>
+                "Soumya blends strategic campaign planning with technical development—expanding outreach and delivering measurable, actionable results every time."
+            </p>
+            <div class="testimonial-author">
+                — Campaign Manager, BrandTech Solutions
+            </div>
+        </div>
+    </section>
+    <section class="contact-short" id="contact">
+        <div class="contact-icon">
+            <a href="mailto:venkatasoumyaalagmail.com" target="_blank">
+                <span class="material-icons">email</span>
+                <span class="contact-label">Email Me</span>
+            </a>
+        </div>
+        <div class="contact-icon">
+            <a href="tel:970457474">
+                <span class="material-icons">call</span>
+                <span class="contact-label">Call Me</span>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div>
+            &copy; 2025 Ala Venkata Soumya — Digital Marketing Specialist. Gajuwaka, Visakhapatnam | 970457474
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 950, once: true, offset: 80 });
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                const section = document.querySelector(this.getAttribute('href'));
+                if(section) section.scrollIntoView({behavior:'smooth'});
+            });
+        });
+    </script>
+</body>
+</html>
